@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 require_relative '../lib/search.rb'
 require_relative '../lib/display.rb'
 

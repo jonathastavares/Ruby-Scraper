@@ -26,7 +26,8 @@
 
 ## 3 - Execute code
 
->- Run the code by typing: 'bin/main.rb' on the terminal.
+>- Go to the bin folder by typing: 'cd bin' on the terminal.
+>- Run the code by typing: 'ruby main.rb' on the terminal.
 
 # Author
 
