@@ -10,17 +10,24 @@ class Table
     if @table[1].text == 'No results returned'
       puts 'No results returned!'
     else
+      print ' POSITION ' + '                      DESCRIPTION                                  '
+      print '                               LINK                            '
+      puts ''
       @table.drop(1).each do |item|
-        print @search_results
-        print '         '
-        print item.text
-        print '                                               '
         link = 'https://thepiratebay.org' + "#{links[@search_results - 1]['href']}"
-        print link
-        puts ''
+        position = @search_results.to_s
+        puts build_row(position, item.text, link)
         @search_results += 1
       end
     end
+  end
+
+  def build_row(position, description, link)
+    row = ' ' * 150
+    row[4] = position
+    row[14] = description
+    row[85] = link
+    row[0..150]
   end
 end
 # rubocop:enable Style/RedundantInterpolation
