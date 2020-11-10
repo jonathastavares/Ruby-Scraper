@@ -33,8 +33,8 @@
 
 👤 **Jonathas Tavares**
 
-- Github: [@githubhandle](https://github.com/jonathastavares)
-- Twitter: [@twitterhandle](https://twitter.com/jhstavares)
+- Github: [JonathasTavares](https://github.com/jonathastavares)
+- Twitter: [@jhstavares](https://twitter.com/jhstavares)
 - Linkedin: [linkedin](https://www.linkedin.com/in/jonathas-tavares-24b8bba3/)
 
 # 🤝 Contributing
@@ -46,3 +46,11 @@ Feel free to check the [issues page](https://github.com/jonathastavares/Ruby-Scr
 # Show your support
 
 Give a ⭐️ if you like this project!
+
+
+	
+Under your project requirements: In developing the project, you should follow the best practices that you already learned in the previous projects, using GitFlow is one of them - You should create a PR from your feature branch to the development branch. For more insights kindly go through the GitFlow guidelines:
+Throws an error while running ruby bin/main.rb. See error
+Add unwanted files to the .gitignore file before pushing your codes, I am seeing chromedriver.exe among your files.
+Your project does not have RSpec Testing, kindly add testing as it is one of the project's requirements (testing your business logic)
+In your Table class inside Display.rb the build_row method should be made private since it's only used with the class

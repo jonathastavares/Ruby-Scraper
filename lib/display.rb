@@ -22,6 +22,8 @@ class Table
     end
   end
 
+  private
+
   def build_row(position, description, link)
     row = ' ' * 150
     row[4] = position
@@ -30,4 +32,5 @@ class Table
     row[0..150]
   end
 end
+
 # rubocop:enable Style/RedundantInterpolation
