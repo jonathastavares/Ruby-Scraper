@@ -1,7 +1,8 @@
 require_relative '../lib/search.rb'
 require_relative '../lib/display.rb'
 
-def check_answer(user_answer)
+def check_answer
+  user_answer = gets.chomp
   if user_answer == 'y'
     puts 'What are you searching for?'
     Search.new(gets.chomp)

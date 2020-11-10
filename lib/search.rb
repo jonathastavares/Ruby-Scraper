@@ -34,6 +34,6 @@ class Search
     browser.quit
     show_results(list, links)
     again = true
-    again = check_answer(gets.chomp) while again == true
+    again = check_answer while again == true
   end
 end
