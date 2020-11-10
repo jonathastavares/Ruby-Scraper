@@ -33,9 +33,9 @@
 
 👤 **Jonathas Tavares**
 
-- Github: [JonathasTavares](https://github.com/jonathastavares)
-- Twitter: [@jhstavares](https://twitter.com/jhstavares)
-- Linkedin: [linkedin](https://www.linkedin.com/in/jonathas-tavares-24b8bba3/)
+- Github: [Jonathas Tavares](https://github.com/jonathastavares)
+- Twitter: [Jonathas Tavares](https://twitter.com/jhstavares)
+- Linkedin: [Jonathas Tavares](https://www.linkedin.com/in/jonathas-tavares-24b8bba3/)
 
 # 🤝 Contributing
 

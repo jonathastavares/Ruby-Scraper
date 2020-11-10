@@ -21,21 +21,7 @@ class Search
     result
   end
 
-  def rerun(user_answer)
-    again = true
-    while again == true
-      if user_answer == 'y'
-        puts 'What are you searching for?'
-        Search.new(gets.chomp)
-      elsif user_answer == 'n'
-        puts 'Thank you for using our Scrapper!'
-        again = false
-      elsif user_answer != 'y' && user_answer != 'n'
-        print 'Invalid answer! Please answer with [Y] or [N]. Do you want to make a new search? '
-        rerun(gets.downcase.chomp)
-      end
-    end
-  end
+  private
 
   def result
     Selenium::WebDriver::Chrome::Service.driver_path = './chromedriver.exe'
@@ -45,10 +31,9 @@ class Search
     session = Nokogiri::HTML.parse(browser.html)
     list = session.css('.item-name')
     links = session.css('.item-name//a')
-    Table.new(list, links)
     browser.quit
-    sleep(1)
-    print 'Do you want to make a new search? [Y]es or [N]o? '
-    rerun(gets.downcase.chomp)
+    show_results(list, links)
+    again = true
+    again = check_answer(gets.chomp) while again == true
   end
 end
