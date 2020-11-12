@@ -17,18 +17,19 @@ def check_answer
 end
 
 def show_results(list)
- result = Table.new(list[0], list[1])
+  result = Table.new(list[0], list[1])
   print ' POSITION ' + '                      DESCRIPTION                                  '
   print '                               LINK                            '
   puts ''
-  result.build_table
+  table = result.build_table
+  puts table
   sleep(1)
 end
 
 def runscript
   search = Search.new(gets.chomp)
   show_results(search.result)
-  print('Do you want to make a new search?')
+  print('Do you want to make a new search? [Y]es or [N]o? ')
   check_answer
 end
 

@@ -26,5 +26,10 @@ describe Search do
       results = @search.result
       expect(results[1].length).to eq(100)
     end
+
+    it 'Checks if the links length is the same as list length' do
+      results = @search.result
+      expect((results[0].length - 1)).to eq(results[1].length)
+    end
   end
 end

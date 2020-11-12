@@ -1,3 +1,4 @@
+# rubocop:disable Style/RedundantReturn
 require 'nokogiri'
 require 'open-uri'
 require 'watir'
@@ -32,3 +33,4 @@ class Search
     return list, links
   end
 end
+# rubocop:enable Style/RedundantReturn

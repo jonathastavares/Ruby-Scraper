@@ -10,12 +10,14 @@ class Table
   end
 
   def build_table
+    results = []
     @table.drop(1).each do |item|
       link = 'https://thepiratebay.org' + "#{@links[@search_results - 1]['href']}"
       position = @search_results.to_s
-      puts build_row(position, item.text, link)
+      results[@search_results - 1] = build_row(position, item.text, link)
       @search_results += 1
     end
+    results
   end
 
   private
