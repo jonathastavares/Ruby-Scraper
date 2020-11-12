@@ -12,22 +12,21 @@ class Table
   def build_table
     results = []
     @table.drop(1).each do |item|
-      link = 'https://thepiratebay.org' + "#{@links[@search_results - 1]['href']}"
+      description = @links[@search_results - 1].to_s
+      link = 'https://thepiratebay.org' + "#{description[9..-1]}"
       position = @search_results.to_s
-      results[@search_results - 1] = build_row(position, item.text, link)
+      results[@search_results - 1] = build_row(position, item, link)
       @search_results += 1
     end
     results
   end
-
-  private
 
   def build_row(position, description, link)
     row = ' ' * 150
     row[4] = position
     row[14] = description
     row[85] = link
-    row[0..150]
+    row[0..136]
   end
 end
 
