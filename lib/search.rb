@@ -5,7 +5,7 @@ require 'selenium-webdriver'
 require_relative '../lib/display.rb'
 
 class Search
-  attr_reader :url, :search_results
+  attr_reader :url
 
   def initialize(input)
     @input = input
@@ -18,10 +18,7 @@ class Search
         @url += put
       end
     end
-    result
   end
-
-  private
 
   def result
     Selenium::WebDriver::Chrome::Service.driver_path = './chromedriver.exe'
@@ -32,8 +29,6 @@ class Search
     list = session.css('.item-name')
     links = session.css('.item-name//a')
     browser.quit
-    show_results(list, links)
-    again = true
-    again = check_answer while again == true
+    return list, links
   end
 end

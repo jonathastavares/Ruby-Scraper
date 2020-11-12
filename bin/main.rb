@@ -1,3 +1,4 @@
+# rubocop:disable Style/RedundantReturn
 require_relative '../lib/search.rb'
 require_relative '../lib/display.rb'
 
@@ -5,29 +6,32 @@ def check_answer
   user_answer = gets.chomp
   if user_answer == 'y'
     puts 'What are you searching for?'
-    Search.new(gets.chomp)
+    runscript
   elsif user_answer == 'n'
     puts 'Thank you for using our Scrapper!'
-    false
+    return false
   elsif user_answer != 'y' && user_answer != 'n'
     print 'Invalid answer! Please answer with [Y] or [N]. Do you want to make a new search? '
     rerun(gets.downcase.chomp)
   end
 end
 
-def show_results(list, links)
-  result = Table.new(list)
-  if result.check_result
-    print ' POSITION ' + '                      DESCRIPTION                                  '
-    print '                               LINK                            '
-    puts ''
-    result.build_table(links)
-  else
-    puts 'No results returned!'
-  end
+def show_results(list)
+ result = Table.new(list[0], list[1])
+  print ' POSITION ' + '                      DESCRIPTION                                  '
+  print '                               LINK                            '
+  puts ''
+  result.build_table
   sleep(1)
-  print 'Do you want to make a new search? [Y]es or [N]o? '
+end
+
+def runscript
+  search = Search.new(gets.chomp)
+  show_results(search.result)
+  print('Do you want to make a new search?')
+  check_answer
 end
 
 puts 'What are you searching for?'
-Search.new(gets.chomp)
+runscript
+# rubocop:enable Style/RedundantReturn
