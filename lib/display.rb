@@ -25,7 +25,7 @@ class Table
     row = ' ' * 150
     row[4] = position
     row[14] = description
-    row[85] = link
+    row[85] = link[0..link.index('"') - 1]
     row[0..136]
   end
 end

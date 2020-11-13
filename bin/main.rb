@@ -2,8 +2,7 @@
 require_relative '../lib/search.rb'
 require_relative '../lib/display.rb'
 
-def check_answer
-  user_answer = gets.chomp
+def check_answer(user_answer)
   if user_answer == 'y'
     puts 'What are you searching for?'
     runscript
@@ -30,7 +29,7 @@ def runscript
   search = Search.new(gets.chomp)
   show_results(search.result)
   print('Do you want to make a new search? [Y]es or [N]o? ')
-  check_answer
+  check_answer(gets.chomp)
 end
 
 puts 'What are you searching for?'

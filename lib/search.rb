@@ -1,6 +1,5 @@
 # rubocop:disable Style/RedundantReturn
 require 'nokogiri'
-require 'open-uri'
 require 'watir'
 require 'selenium-webdriver'
 require_relative '../lib/display.rb'
@@ -24,7 +23,7 @@ class Search
   def result
     Selenium::WebDriver::Chrome::Service.driver_path = './chromedriver.exe'
     browser = Watir::Browser.new
-    browser.goto @url
+    browser.goto(@url)
     sleep(3)
     session = Nokogiri::HTML.parse(browser.html)
     list = session.css('.item-name')

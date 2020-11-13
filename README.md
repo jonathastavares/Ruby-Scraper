@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# The PirateBay search Scrapper
+# The PirateBay search Scraper
 
-> This is a search scrapper of [PirateBay](https://thepiratebay.org/index.html), it asks for an user input, and returns the search result.
+> This is a search scraper of [PirateBay](https://thepiratebay.org/index.html), it asks for an user input, and returns the search result.
 
 ![screenshot](/screenshot.jpg)
 
@@ -11,8 +11,9 @@
 - Ruby
 - Nokogiri
 - Watir
+- ChromeDriver
 
-# How to use in 3 steps
+# How to use in 4 steps
 
 ## 1 - Install Ruby
 
@@ -20,13 +21,20 @@
 
 ## 2 - Clone Repository
 
->- Visit [Repository Page](https://github.com/jonathastavares/Ruby-Scrapper)
+>- Visit [Repository Page](https://github.com/jonathastavares/Ruby-Scraper)
 >- Click on Code button and copy the URL link.
 >- Clone it using Github Desktop or Git bash.
 
-## 3 - Execute code
+## 3 - Download Chromedriver
 
->- Go to the bin folder by typing: 'cd bin' on the terminal.
+>- Check the version of your google chrome/chromium installed clicking on the top right 3 dots button, then click on help, and then click on about chrome to check the current version installed, if you don't have it installed you will have to download [Chrome](https://www.google.com/intl/pt-BR/chrome/).
+>- Download [ChromeDriver](https://chromedriver.storage.googleapis.com/index.html).
+>- Put the Chromedriver.exe file in the root folder where you cloned the repository.
+
+## 4 - Execute code
+
+>- Open the terminal and type 'bundle install' to install all required gems to run this code.
+>- Go into bin folder by typing: 'cd bin' on the terminal.
 >- Run the code by typing: 'ruby main.rb' on the terminal.
 
 # Author
@@ -41,16 +49,8 @@
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/jonathastavares/Ruby-Scrapper/issues).
+Feel free to check the [issues page](https://github.com/jonathastavares/Ruby-Scraper/issues).
 
 # Show your support
 
 Give a ⭐️ if you like this project!
-
-
-	
-Under your project requirements: In developing the project, you should follow the best practices that you already learned in the previous projects, using GitFlow is one of them - You should create a PR from your feature branch to the development branch. For more insights kindly go through the GitFlow guidelines:
-Throws an error while running ruby bin/main.rb. See error
-Add unwanted files to the .gitignore file before pushing your codes, I am seeing chromedriver.exe among your files.
-Your project does not have RSpec Testing, kindly add testing as it is one of the project's requirements (testing your business logic)
-In your Table class inside Display.rb the build_row method should be made private since it's only used with the class
