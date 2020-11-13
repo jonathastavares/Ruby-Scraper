@@ -1,5 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
+<<<<<<< HEAD
 # The PirateBay search Scraper
 
 > This is a search scraper of [PirateBay](https://thepiratebay.org/index.html), it asks for an user input, and returns the search result.
@@ -54,3 +55,6 @@ Feel free to check the [issues page](https://github.com/jonathastavares/Ruby-Scr
 # Show your support
 
 Give a ⭐️ if you like this project!
+=======
+# The PirateBay search Scrapper
+>>>>>>> development
