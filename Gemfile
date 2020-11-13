@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'nokogiri'
-gem 'watir'
-gem 'selenium-webdriver'
 gem 'rspec'
+gem 'selenium-webdriver'
+gem 'watir'
