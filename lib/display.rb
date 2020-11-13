@@ -3,9 +3,11 @@
 class Table
   attr_reader :table
 
-  def initialize(list, links)
+  def initialize(list, links, sizes, seeds)
     @table = list
     @links = links
+    @sizes = sizes
+    @seeds = seeds
     @search_results = 1
   end
 
@@ -15,18 +17,20 @@ class Table
       description = @links[@search_results - 1].to_s
       link = 'https://thepiratebay.org' + "#{description[9..-1]}"
       position = @search_results.to_s
-      results[@search_results - 1] = build_row(position, item, link)
+      results[@search_results - 1] = build_row(position, item, link, @sizes[@search_results], @seeds[@search_results])
       @search_results += 1
     end
     results
   end
 
-  def build_row(position, description, link)
-    row = ' ' * 150
+  def build_row(position, description, link, size, seed)
+    row = ' ' * 160
     row[4] = position
     row[14] = description
     row[85] = link[0..link.index('"') - 1]
-    row[0..136]
+    row[140] = size
+    row[155] = seed
+    row[0..160]
   end
 end
 

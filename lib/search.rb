@@ -28,8 +28,10 @@ class Search
     session = Nokogiri::HTML.parse(browser.html)
     list = session.css('.item-name')
     links = session.css('.item-name//a')
+    sizes = session.css('.item-size')
+    seeds = session.css('.item-seed')
     browser.quit
-    return list, links
+    return list, links, sizes, seeds
   end
 end
 # rubocop:enable Style/RedundantReturn

@@ -16,9 +16,10 @@ def check_answer(user_answer)
 end
 
 def show_results(list)
-  result = Table.new(list[0], list[1])
+  result = Table.new(list[0], list[1], list[2], list[3])
   print ' POSITION ' + '                      DESCRIPTION                                  '
   print '                               LINK                            '
+  print '  SIZE      SEEDS   '
   puts ''
   table = result.build_table
   puts table
@@ -31,7 +32,8 @@ def runscript
   print('Do you want to make a new search? [Y]es or [N]o? ')
   check_answer(gets.chomp)
 end
-
+puts 'This is a Web Scraper for ThePirateBay.org, which is a torrent search website!'
+puts 'Type whatever you want to search and the Scraper will retrieve the information found at ThePirateBay.org'
 puts 'What are you searching for?'
 runscript
 # rubocop:enable Style/RedundantReturn
