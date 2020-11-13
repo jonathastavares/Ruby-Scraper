@@ -19,7 +19,7 @@ def show_results(list)
   result = Table.new(list[0], list[1], list[2], list[3])
   print ' POSITION ' + '                      DESCRIPTION                                  '
   print '                               LINK                            '
-  print '  SIZE      SEEDS   '
+  print '  SIZE         SEEDS      '
   puts ''
   table = result.build_table
   puts table
