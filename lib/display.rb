@@ -27,10 +27,11 @@ class Table
     row = ' ' * 160
     row[4] = position
     row[14] = description
-    row[85] = link[0..link.index('"') - 1]
+    limit = link.index('"') - 1
+    row[85] = link[0..limit]
     row[140] = size
     row[155] = seed
-    row[0..160]
+    row[0..156]
   end
 end
 
