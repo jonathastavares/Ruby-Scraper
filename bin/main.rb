@@ -19,16 +19,43 @@ def show_results(list)
   result = Table.new(list[0], list[1], list[2], list[3])
   print ' POSITION ' + '                      DESCRIPTION                                  '
   print '                               LINK                            '
-  print '  SIZE         SEEDS      '
+  print '  SIZE       SEEDS      '
   puts ''
   table = result.build_table
   puts table
   sleep(1)
 end
 
+def html_builder(list)
+  file = Nokogiri::HTML::Builder.new do |html|
+    position = 1
+    html.body do
+      html.node1 'POSITION  DESCRIPTION  LINK  SIZE  SEEDS' do
+        html.br
+        while position < list[0].length
+          html.div = position
+          html.div = list[0][position].text
+          link = list[1][position - 1].to_s
+          limit = link.index('>') - 2
+          html.div = 'https://thepiratebay.org' + link[9..limit]
+          html.div = list[2][position].text
+          html.div = list[3][position].text
+          html.br
+          position += 1
+        end
+      end
+    end
+  end
+  file.to_html
+end
+
 def runscript
-  search = Search.new(gets.chomp)
-  show_results(search.result)
+  user_input = gets.chomp
+  search = Search.new(user_input)
+  list = search.result
+  show_results(list)
+  file = html_builder(list)
+  File.open(user_input + '.html', 'w') { |f| f.write(file) }
   print('Do you want to make a new search? [Y]es or [N]o? ')
   check_answer(gets.chomp)
 end
