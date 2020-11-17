@@ -14,8 +14,7 @@ class Table
   def build_table
     results = []
     @table.drop(1).each do |item|
-      description = @links[@search_results - 1].to_s
-      link = 'https://thepiratebay.org' + "#{description[9..-1]}"
+      link = @links[@search_results - 1].to_s
       position = @search_results.to_s
       results[@search_results - 1] = build_row(position, item, link, @sizes[@search_results], @seeds[@search_results])
       @search_results += 1
@@ -27,8 +26,8 @@ class Table
     row = ' ' * 160
     row[4] = position
     row[14] = description
-    limit = link.index('"') - 1
-    row[85] = link[0..limit]
+    str = 'https://thepiratebay.org' + "#{link[9..link.index('>') - 2]}"
+    row[85] = str
     row[140] = size
     row[155] = seed
     row[0..156]
