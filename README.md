@@ -36,6 +36,7 @@
 >- Open the terminal and type 'bundle install' to install all required gems to run this code.
 >- Go into bin folder by typing: 'cd bin' on the terminal.
 >- Run the code by typing: 'ruby main.rb' on the terminal.
+>- The final result will be displayed on terminal and also output to a html file wich will be on the root folder named with your search input.
 
 # Author
 
