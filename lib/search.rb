@@ -21,7 +21,7 @@ class Search
   end
 
   def result
-    Selenium::WebDriver::Chrome::Service.driver_path = './chromedriver.exe'
+    Selenium::WebDriver::Chrome::Service.driver_path = '../chromedriver.exe'
     browser = Watir::Browser.new
     browser.goto(@url)
     sleep(3)

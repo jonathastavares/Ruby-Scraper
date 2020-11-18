@@ -13,6 +13,11 @@
 - Watir
 - ChromeDriver
 
+# LIVE DEMO LINK
+
+>- Click below to watch a short video presenting the project and also showing how to use it.
+>- [INSTRUCTIONS VIDEO](https://www.loom.com/share/e83a727c2b4048c2a868230becbc76f2)
+
 # How to use in 4 steps
 
 ## 1 - Install Ruby
