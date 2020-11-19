@@ -16,7 +16,7 @@
 # LIVE DEMO LINK
 
 >- Click below to watch a short video presenting the project and also showing how to use it.
->- [INSTRUCTIONS VIDEO](https://www.loom.com/share/e83a727c2b4048c2a868230becbc76f2)
+>- [INSTRUCTIONS VIDEO](https://www.loom.com/share/cd8054e1c1b046b2b4af7212d263c0cc)
 
 # How to use in 4 steps
 
