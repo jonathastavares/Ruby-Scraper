@@ -30,13 +30,7 @@
 >- Click on Code button and copy the URL link.
 >- Clone it using Github Desktop or Git bash.
 
-## 3 - Download Chromedriver
-
->- Check the version of your google chrome/chromium installed clicking on the top right 3 dots button, then click on help, and then click on about chrome to check the current version installed, if you don't have it installed you will have to download [Chrome](https://www.google.com/intl/pt-BR/chrome/).
->- Download [ChromeDriver](https://chromedriver.storage.googleapis.com/index.html) according to the version of you Chrome.
->- Put the Chromedriver.exe file in the root folder where you cloned the repository.
-
-## 4 - Execute code
+## 3 - Execute code
 
 >- Open the terminal and type 'bundle install' to install all required gems to run this code.
 >- Go into bin folder by typing: 'cd bin' on the terminal.

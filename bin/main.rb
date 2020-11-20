@@ -3,7 +3,6 @@ require_relative '../lib/search.rb'
 require_relative '../lib/display.rb'
 
 def check_answer(user_answer)
-  user_answer = user_answer.downcase
   if user_answer == 'y'
     puts 'What are you searching for?'
     runscript
@@ -82,7 +81,7 @@ def runscript
   file = html_format(file)
   File.open(user_input + '.html', 'w') { |f| f.write(file) }
   print('Do you want to make a new search? [Y]es or [N]o? ')
-  check_answer(gets.chomp)
+  check_answer(gets.downcase.chomp)
 end
 puts 'This is a Web Scraper for ThePirateBay.org, which is a torrent search website!'
 puts 'Type whatever you want to search and the Scraper will retrieve the information found at ThePirateBay.org'

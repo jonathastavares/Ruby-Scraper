@@ -1,7 +1,7 @@
 # rubocop:disable Style/RedundantReturn
 require 'nokogiri'
 require 'watir'
-require 'selenium-webdriver'
+require 'webdrivers'
 require_relative '../lib/display.rb'
 
 class Search
@@ -21,7 +21,6 @@ class Search
   end
 
   def result
-    Selenium::WebDriver::Chrome::Service.driver_path = '../chromedriver.exe'
     browser = Watir::Browser.new
     browser.goto(@url)
     sleep(3)
