@@ -12,7 +12,7 @@ def check_answer(user_answer)
     return false
   elsif user_answer != 'y' && user_answer != 'n'
     print 'Invalid answer! Please answer with [Y] or [N]. Do you want to make a new search? '
-    rerun(gets.downcase.chomp)
+    check_answer(gets.downcase.chomp)
   end
 end
 
