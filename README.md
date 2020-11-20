@@ -18,7 +18,7 @@
 >- Click below to watch a short video presenting the project and also showing how to use it.
 >- [INSTRUCTIONS VIDEO](https://www.loom.com/share/cd8054e1c1b046b2b4af7212d263c0cc)
 
-# How to use in 4 steps
+# How to use in 3 steps
 
 ## 1 - Install Ruby
 
